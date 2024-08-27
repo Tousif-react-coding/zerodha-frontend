@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.custom-dialog .MuiDialog-container {
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin: 1rem;
+}
+
+.custom-dialog .MuiDialog-paper {
+  min-width: 500px; /* Adjust this width as per your requirements */
+  margin: 40px 0 0 0; /* Adjust the margin to position the dialog below the menu */
+  padding: 20px; /* Add padding inside the dialog */
+}
+.logo {
+  width: 40px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Space between logo and menu icon */
+}
+
+#supportHero{
+  background-color: rgb(56, 126, 209);
+  color: white;
+}
+
+#supportHero a{
+  color: white;
+}
+
+#supportWrapper{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 150px;
+}
+
+#supportHero input{
+  padding: 20px 50px;
+  width: 100%;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+}
+.Toastify__toast-container {
+  z-index: 9999; /* Ensure it’s above other content */
+}
+
+.dashboard{
+  
+  width: 100%;
+}
