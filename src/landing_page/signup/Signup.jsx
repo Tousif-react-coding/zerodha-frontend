@@ -29,7 +29,7 @@ const Signup = () => {
     
     const configuration = {
       method: 'post',
-      url: 'http://localhost:3000/api/signup',
+      url: 'https://zerodha-backend-t5mh.onrender.com/api/signup',
       data: formData,
     };
   

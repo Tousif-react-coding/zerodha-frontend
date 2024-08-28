@@ -11,7 +11,7 @@ function Dashboard() {
       <div>
         <img src="logo.png" alt="png" />
       </div>
-      <a href="http://localhost:5174/">Go To Dashboard</a>
+      <a href="">Go To Dashboard</a>
       <LogoutButton/>
     </div>
   );
