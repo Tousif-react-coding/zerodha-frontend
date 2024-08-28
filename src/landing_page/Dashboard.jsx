@@ -11,7 +11,7 @@ function Dashboard() {
       <div>
         <img src="logo.png" alt="png" />
       </div>
-      <a href="">Go To Dashboard</a>
+      <a href="https://zerodha-dashboard-ptj9.onrender.com">Go To Dashboard</a>
       <LogoutButton/>
     </div>
   );
