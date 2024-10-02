@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {Button}  from "@mui/material";
+import Cookies from "universal-cookie";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -15,6 +16,8 @@ const Signup = () => {
     password: '',
   });
   const [signup , setSignup] = useState(false)
+
+  const cookies = new Cookies();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -39,6 +42,10 @@ const Signup = () => {
       
       // Handle successful registration
       setSignup(true);
+        // Assuming your API returns a token upon successful signup
+        cookies.set("TOKEN", result.data.token, {
+          path: "/",
+        });
       setFormData({
         name: '',
         email: '',
@@ -46,7 +53,7 @@ const Signup = () => {
       });
       toast.success('Registration Successful');
       setTimeout(() => {
-        navigate('/')
+        navigate('/dashboard')
       }, 4000);
       
     } catch (error) {
@@ -135,6 +142,9 @@ const Signup = () => {
                 <button type="submit" className="btn btn-primary">
                 Register
               </button>
+              <p>Already have an account,go to  &nbsp;
+                <Link to="/login">Login</Link>
+              </p>
              
           </form>
         </div>

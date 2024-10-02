@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button } from "@mui/material";
 import Cookies from "universal-cookie";
 const cookies = new Cookies();
@@ -108,6 +108,10 @@ const Login = () => {
               <button type="submit" className="btn btn-primary">
                 Login
               </button>
+              <p>Don't have an account,go to signup first &nbsp;
+                <Link to="/signup">Signup</Link>
+              </p>
+              
             </form>
           </div>
         </div>
